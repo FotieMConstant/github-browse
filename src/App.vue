@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <div id="nav"><Appbar /></div>
+    <router-view />
   </div>
 </template>
 
+<script>
+import Appbar from "@/components/Appbar.vue";
+
+export default {
+  components: {
+    Appbar,
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -19,7 +25,7 @@
 
 #nav {
   padding: 30px;
-
+  margin-top: 100px;
   a {
     font-weight: bold;
     color: #2c3e50;
